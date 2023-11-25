@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #daac00;
+}
+
+header .header-container {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 220px minmax(200px, 1fr) 270px;
+    justify-items: center;
+    align-items: center;
+}
+
+header .header-container .logo-wrapper p a {
+    font-size: 22px;
+    color: #ffff;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+header .header-container .nav-wrapper ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+header .header-container .nav-wrapper ul li a {
+    font-size: 29px;
+    color: #ffff;
+    font-weight: 500;
+    font-family: 'Poppins';
+    text-decoration: none;
+}
+
+header .header-container .search-wrapper form {
+    position: relative; /*за да може да сложим кутийката върху search-a използваме релативна позиция на формуляра и абосолютна на сърч бутона. Това е единия вариант.*/
+}
+
+header .header-container .search-wrapper form input {
+    background: #fcc302;
+    width: 100%;
+    padding: 5px;
+    font-size: 21px;
+    letter-spacing: 0px;
+    color: #ffff;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    box-sizing: border-box; /*кара елемента да остане с 1 width и да не се променя от падинга и съдържанието вътре в него*/
+}
+
+header .header-container .search-wrapper form input::placeholder { /*взимаме си плейсхолдера, за да може да си променим цвета на плейсхолдера*/
+    color: white;
+    opacity: 1; /*с него караме елемента да не е прозрачен, приема стойност от 0 до 1*/
+}
+
+header .header-container .search-wrapper form input[type="submit"] {
+    background: #00bec9;
+    width: unset;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+section.bg-y {
+    background: #fcc302;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+section .banner-container {
+    max-width: 1200px;
+    margin: 0 auto; /*за да се центрира по средата и да взема желаното от нас място*/
+    display: grid;
+    grid-template-columns: 2fr 1fr; /*2 колони, от които едната да заема 2 пъти повече място*/
+}
+
+section .banner-container .banner-content{
+    display: grid;
+    grid-template-rows: 220px 220px 100px
+}
+
+section .banner-container .banner-content h1 {
+    font-size: 67px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif; /*даваме му sans-serif, за да може да си получи шрифта*/
+    margin: 0;
+    align-self: start;
+}
+
+section .banner-container .banner-content p {
+    font-size: 29px;
+    letter-spacing: 0px;
+    color: #fff;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    align-self: center;
+}
+
+section .banner-container .banner-content .banner-buttons{
+    align-self: end;
+}
+
+section .banner-container .banner-content .banner-buttons button{
+    text-transform: capitalize;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #ffff;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+section .banner-container .banner-content .banner-buttons button.btn-contact{
+    background: #00bec9;
+    border: 4px solid #00bec9;
+    margin-right: 20px;
+}
+section .banner-container .banner-content .banner-buttons button.btn-contact:hover{
+    color: #00bec9;
+    background: transparent;
+}
+
+section .banner-container .banner-content .banner-buttons button.btn-service{
+    background: transparent; /*той казва вземи на родителя бакграунда*/
+    border: 4px solid white;
+}
+section .banner-container .banner-content .banner-buttons button.btn-service:hover {
+   background:  white;
+   border: 4px solid transparent;
+   color: #fcc302;
+}
+
+section{
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+
+section .service-container{
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+section .service-container .service-content{
+    display: grid;
+    grid-template-rows: 220px 220px 100px;
+}
+section .service-container .service-content h2{
+    font-size: 50px;
+    color: #313243;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+
+section .service-container .service-content p{
+    font-size: 29px;
+    letter-spacing: 0px;
+    color: #313243;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}
+
+section .service-container .service-content .service-button button.btn-service{
+    text-transform: capitalize;
+    font-size: 21px;
+    letter-spacing: 0px;
+    color: white;
+    font-weight: 600;
+    font-family: "Poppints", sans-serif;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #fcc302;
+    border: 4px solid #fcc302;
+}
+
+section .service-container .service-content .service-button button.btn-service:hover{
+    background-color: #ffff;
+    color: #fcc302;
+}
+
+section .service-container .service-image{
+    align-self: center;
+    justify-self: center;
+    position: relative;
+}
+
+section .service-container .service-image::before{
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    /* bottom: -20px; може да използваме отрицателни стойности, за да ги изкараме извън контейнера */
+    top: calc(100% - 80px);
+    /* left: -20px; */
+    right: calc(100% - 80px);
+    background-color: #fcc302;
+    display: block;
+}
+
+section .service-container .service-image .image-placeholder{
+    width: 400px;
+    height: 400px;
+    /* background-color: red; */
+    position: relative;
+}
+
+section .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 400px 80px 80px;
+    grid-template-areas: 
+    'title title title' 
+    'slogan slogan slogan'
+    'img-1 img-2 img-3' 
+    'sub-title-1 sub-title-2 sub-title-3' 
+    'p-1 p-2 p-3';
+    grid-gap: 0 60px;
+}
+
+section .services-container h2.title {
+    grid-area: title;
+    justify-self: center;
+}
+
+section .services-container p.slogan {
+    grid-area: slogan;
+    justify-self: center;
+}
+
+section .services-container img {
+    width: 100%;
+    height: 100%;
+}
+
+section .services-container img.img-1 {
+    grid-area: img-1;
+    justify-self: center;
+}
+
+section .services-container img.img-2 {
+    grid-area: img-2;
+    justify-self: center;
+}
+
+section .services-container img.img-3 {
+    grid-area: img-3;
+    justify-self: center;
+}
+
+section .services-container h3.sub-h3-1 {
+    grid-area: sub-title-1;
+    justify-self: center;
+}
+
+section .services-container h3.sub-h3-2 {
+    grid-area: sub-title-2;
+    justify-self: center;
+}
+
+section .services-container h3.sub-h3-3 {
+    grid-area: sub-title-3;
+    justify-self: center;
+}
+
+section .services-container p.p-1 {
+    grid-area: p-1;
+    justify-self: center;
+}
+
+section .services-container p.p-2 {
+    grid-area: p-2;
+    justify-self: center;
+}
+
+section .services-container p.p-3 {
+    grid-area: p-3;
+    justify-self: center;
+}
+
+
+
+

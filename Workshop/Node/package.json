@@ -1,0 +1,23 @@
+{
+  "name": "first-server",
+  "version": "0.0.1",
+  "description": "This is my first attemp of creating a NODE JS HTTP server",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server",
+    "httpserver",
+    "learning"
+  ],
+  "author": "Mustafa Dzhindzhi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

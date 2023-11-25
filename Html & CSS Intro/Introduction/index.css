@@ -1,0 +1,55 @@
+/*body {
+    background-color: wheat;
+    color: white;
+}
+
+p, a{
+    text-transform: uppercase;
+}
+
+/*Universal selector
+h1, h2, h3{
+    color: black;
+}
+
+p{
+    color: blue;
+}
+
+/*Class selector
+.post{
+    color:brown;
+}
+
+p.post{
+    color:teal
+}
+
+/*ID selector
+#special{
+
+    color: chocolate;
+}
+
+/*child selector избираме а:*
+li > a {
+text-decoration:none;
+}
+/*може да го кажем и така*
+li a{
+    text-decoration: none;
+}
+
+/*Adjacent siblings*
+li + p {
+display: flex;
+}
+
+/*General sibling*
+li ~ p {
+    text-emphasis: dot;
+}
+*/
+/* * {
+    color: red;
+} */

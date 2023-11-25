@@ -1,0 +1,16 @@
+[{
+    "id": 1,
+    "title": "first post",
+    "content": "this is my content",
+    "keywords": ["post", "first", "content"]
+}, {
+    "id": 2,
+    "title": "First post from terminal - EDITED",
+    "content": "special super secret content",
+    "keywords": ["unique", "special", "secret"]
+}, {
+    "id": 3,
+    "title": "First post from terminal",
+    "content": "special super secret content",
+    "keywords": ["unique", "special", "secret"]
+}]
