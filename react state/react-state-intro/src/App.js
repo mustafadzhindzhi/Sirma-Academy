@@ -1,30 +1,36 @@
 import './App.css';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+import UserTable from './components/pages/UserTable.jsx';
 
-function CounterVisualizer({value}) {
-  return <p>{value}</p>
-}
+// function CounterVisualizer({value}) {
+  
+//   return <p>{value}</p>
+// }
  
 function App() {
+  // const [counter, setCounter] = useState(0);
+//   const [isEven, setIsEven] = useState(true);
 
-  const [serverData, setServerData] = useState([]);
-  const displayData = serverData.filter((data) => !data);
+//   useEffect(() => {
+//     console.log('Mouted');
+//   }, []);
 
-  const [counter, setCounter] = useState(0);
-  const isEven = !(counter % 2)
-  // const [isEven, setIsEven] = useState(true);
+//   useEffect(() => {
+//     console.log("Update from counter");
+//   },[counter, isEven]);
 
-function increment() {
-  setCounter((prev) => prev + 1);
-  // setCounter((prev) => prev + 1);
-  // setIsEven(!!(counter % 2));
-  // console.log(counter);
-}
+// function increment() {
+//   setCounter((prev) => prev + 1);
+//   // setCounter((prev) => prev + 1);
+//   setIsEven(!!(counter % 2));
+//   // console.log(counter);
+// }
   return (
     <div className="App">
-      <CounterVisualizer value={counter} />
+      {/* <CounterVisualizer value={counter} />
       <p>{isEven ? 'Even number' : 'Odd number'}</p>
-      <button onClick={increment}>Add</button>
+      <button onClick={increment}>Add</button> */}
+      <UserTable/>
     </div>
   );
 }
