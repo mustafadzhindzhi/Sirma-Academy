@@ -1,8 +1,13 @@
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 function Main () {
     return (
         <div>
+            <nav>
+                <NavLink to={"/"}>Home</NavLink> 
+                <NavLink to={"/profile"}>Profile</NavLink> 
+                <NavLink to={"/user-tickets"}>User Tickets</NavLink> 
+            </nav>
             <h1>I'm home page</h1>
             <Outlet/>
         </div>
