@@ -5,15 +5,16 @@ import SubmitInput from "../components/Inputs/SubmitInput.jsx";
 import { useLogin } from "../hooks/useLogin.js";
 
 function Login() {
- const [email, password, handleEmailChange, handleLoginForm, handlePasswordChange] = useLogin();
+  const { email, password, handleEmailChange, handleLoginForm, handlePasswordChange } = useLogin();
 
   return (
     <div>
       <form method="POST" onSubmit={handleLoginForm}>
         <EmailInput 
-        value={email}
-        changeHandler={handleEmailChange}
-        labelText="Email"/>
+          value={email}
+          changeHandler={handleEmailChange}
+          labelText="Email"
+        />
         <PasswordInput
           value={password}
           changeHandler={handlePasswordChange}

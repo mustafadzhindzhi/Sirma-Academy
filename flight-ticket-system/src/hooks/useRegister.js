@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { checkArrayForEmptyString, isPassDif } from "../utils/validations.js";
 
 function useRegister () {
     const [firstName, setFirstName] = useState("");
@@ -34,27 +35,23 @@ function useRegister () {
   
     function handleRegisterForm(e) {
       e.preventDefault();
-      if (
-        !(
-          firstName.trim() ||
-          lastName.trim() ||
-          phone.trim() ||
-          email.trim() ||
-          password.trim() ||
-          repassword.trim()
-        )
-      ) {
+      if(checkArrayForEmptyString([firstName, lastName, phone, email, password, repassword])
+      )  {
         alert("All fields are required!");
         return;
       }
   
-      if (password !== repassword) {
+      if(isPassDif(password, repassword)) {
         alert("Password don't match");
+        return;
       }
   
-      fetch("/api/v1/login", {
+      fetch("/api/v1/register", {
         method: "POST",
         body: JSON.stringify({
+          firstName,
+          lastName,
+          phone,  
           email,
           password,
         }),

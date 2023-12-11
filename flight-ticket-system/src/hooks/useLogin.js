@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { checkArrayForEmptyString } from "../utils/validations.js";
 
 function useLogin () {
     const [email, setEmail] = useState("");
@@ -14,7 +15,7 @@ function useLogin () {
   
     function handleLoginForm(e) {
       e.preventDefault();
-      if (!(email.trim() || password.trim())) {
+      if (checkArrayForEmptyString(email, password)) {
         alert("Email and Password fields are required!");
         return;
       }
@@ -34,6 +35,6 @@ function useLogin () {
     return {
         email, password, handleEmailChange, handlePasswordChange, handleLoginForm
     }
-};
+}
 
-export {useLogin};
+export { useLogin };
