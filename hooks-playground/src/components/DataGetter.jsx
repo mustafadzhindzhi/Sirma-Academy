@@ -12,12 +12,12 @@ function DataGetter(props) {
         .catch((err) => console.log(err));
     }, []);
 
-    return (
-        <div>
-            {theme.theme}
-            {data ? <p>Data:{data.map(item => item.toString())}</p>: <p>Loading...</p>}
-        </div>
-    )
+    // return (
+    //     <div>
+    //         {theme.theme}
+    //         {data ? <p>Data:{data.map(item => item.toString())}</p>: <p>Loading...</p>}
+    //     </div>
+    // )
 };
 
 export default DataGetter ;
