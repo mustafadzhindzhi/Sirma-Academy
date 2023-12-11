@@ -10,7 +10,8 @@ import { ThemeProvider, withTheme } from './context/useThemeContext.js';
 function App() {
   return (
     <div className="App">
-      <FormComponent />
+      <Counter/>
+      {/* <FormComponent /> */}
       {/* <MemoExample /> */}
       {/* <ThemeProvider>
         <VerySlowComponent />
